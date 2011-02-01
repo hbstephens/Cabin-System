@@ -1,0 +1,44 @@
+* Cabin Software - Copyright 1996-2011     H. Bruce Stephens
+*
+*
+* Cabin Software - This is the main module which is downloaded into
+*       the Cabin System 68HC11 for execution.   The Cabin Software
+*       provides a basis for remotely monitoring the Cabin Sensors.
+*       In addition, the Cabin Software provides a transparent 
+*       interface to the CP290 for direct power control of lights,
+*       equipment, etc via the X10 system.   The Cabin Software also
+*       provides a history of the weather information collected by
+*       the Cabin System.    Local display operations are provided 
+*       using a LCD panel which can monitor the sensors directly.
+*
+* The Cabin System Software will be refered to as CSS
+*
+* Second generation build date: Wednesday, August 25, 1993
+*
+* Modification History
+*
+*   Version   Who          When         Why
+*    FT1.0    hbs      25-Aug-1993    Initial Release for 1st field test
+*     V1.x    hbs      14-Jul-1996    Revision history begins
+*     V1.37   hbs      15-Jul-1996    Must delay a few seconds on startup
+*                                     to give the CP290 time to come online
+*     V1.38   hbs      18-Jul-1996    Improved display characteristics and
+*                                     corrected modem hangup sequence
+*     V1.39   hbs      19-Jul-1996    Minor home/clear cleanup
+*     V1.40   hbs      22-Jul-1996    Limit the history days to 25
+*     V1.41   hbs      13-Aug-1996    Cabin deployment, added extra timing
+*                                     delay to temp bus, fixed sensor names                                     
+*                                     to match location 
+*     V1.42   hbs      25-Dec-1996    Correction to history logic, fix rel
+*                                     light lcd negative display, bumped
+*                                     the birthday: Sunday, 25Aug96
+*     V1.43   hbs      27-Dec-1996    Continue to correct history logic
+*                                     and non negative high/low display
+*     V1.44   hbs      31-Dec-1996    Open/close door count fix for non 
+*                                     negitive numbers and added stops to
+*                                     the end of the code for power down
+*     V1.45   hbs      13-Nov-2000    Remove the Y2K problems.
+*     V1.50   hbs      11-Dec-2001    Bumped the birth date and added a new
+*                                     command at the USERNAME: prompt for 
+*                                     a PC to dump just the first of the RAM
+*     V1.51   hbs       1-Feb-2011    Added to public repository
